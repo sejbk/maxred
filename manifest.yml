@@ -1,0 +1,19 @@
+applications:
+- path: .
+  memory: 896M
+  instances: 1
+  domain: mybluemix.net
+  name: maxred
+  host: maxred
+  disk_quota: 1024M
+  services:
+  - Internet of Things Platform-ld
+  - maxred-cloudantNoSQLDB
+  - Language Translator
+  - Weather Company Data
+  env:
+    NODE_RED_STORAGE_NAME: maxred-cloudantNoSQLDB
+    NODE_RED_PASSWORD: Pa55w0rd!
+    BLUEMIX_APP_MGMT_ENABLE: devconsole shell inspector
+    NODE_ENV: development
+    NODE_RED_USERNAME: ibmjbk
